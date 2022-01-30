@@ -29,7 +29,7 @@ export class NavComponent implements OnInit {
         console.log(error);
       },
       complete: () => console.info('complete') 
-    });;
+    });
   }
 
   logout(){
