@@ -47,6 +47,18 @@ export class MembersService {
     return this.userParams;
   }
   
+  addLike(username: string) {
+    return this.http.post(this.baseUrl + 'likes/' + username, {})
+  }
+
+  getLikes(predicate: string, pageNumber: number, pageSize: number) {
+    
+    let params = this.getPaginationHeaders(pageNumber, pageSize);
+    params = params.append('predicate', predicate);
+    return this.getPaginatedResults<Partial<Member[]>>(this.baseUrl + 'likes', params);
+    
+  }
+
   getMembers(userParams : UserParams)
   {
 
