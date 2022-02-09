@@ -1,6 +1,9 @@
 <form [formGroup]='registerForm' (ngSubmit)="register()" autocomplete="off">
     <h2 class="text-center text-align">Sign up</h2>
     <br>
+    <!-- <app-text-input [formControl]='registerForm.controls["username"]' [label]='"Username"'></app-text-input>
+    <app-text-input [formControl]='registerForm.controls["password"]' [label]='"Password"'></app-text-input>
+    <app-text-input [formControl]='registerForm.controls["passwordConfirm"]' [label]='"ConfirmPassword"'></app-text-input> -->
     <div class="form-group">
         <input 
         [class.is-invalid]='registerForm.get("username")?.errors && registerForm.get("username")?.touched'

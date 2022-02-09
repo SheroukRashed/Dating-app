@@ -2,7 +2,6 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, ValidatorFn, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { AccountService } from '../_services/account.service';
-
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -13,7 +12,7 @@ export class RegisterComponent implements OnInit {
   // @Input() usersFromHomeComponent:any;
   @Output() cancelRegister = new EventEmitter();
   model: any = {};
-  registerForm!: FormGroup;
+  registerForm!:  FormGroup;
 
 
   constructor(private accountService: AccountService, private toastr: ToastrService) { }
